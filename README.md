@@ -1,4 +1,4 @@
-# PCB Fault Detection 
+# PCB Fault Detection
 
 This project is designed to detect and describe defects in printed circuit boards (PCBs) using a YOLOv5 deep learning model. It identifies common defects like missing holes, open circuits, and short circuits, and provides bounding boxes with confidence levels for each detection.
 
@@ -28,25 +28,30 @@ This project is designed to detect and describe defects in printed circuit board
    source yolov5-env/bin/activate
    ```
 
-3. **Install Dependencies**:
+3. **Download YOLOv5 Model**:
+   - Create a directory named `model` in the project root:
+     ```bash
+     mkdir model
+     ```
+   - Download the YOLOv5 model file from [this link](https://drive.google.com/file/d/11aHyIGWX5vh7KMdntEYJj2maC_JihyTC/view?usp=drive_link).
+   - Save the downloaded file into the `model` directory.
+
+4. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Download YOLOv5 Model**:
-   Ensure the YOLOv5 model files are present in the `model` directory.
-
-## Usage
-
-1. **Run the Application**:
+5. **Run the Application**:
    ```bash
    python3 appVision.py
    ```
 
-2. **Access the Web Interface**:
+## Usage
+
+1. **Access the Web Interface**:
    - Open your browser and go to the local URL displayed in the terminal (e.g., `http://127.0.0.1:7860`).
 
-3. **Upload PCB Images**:
+2. **Upload PCB Images**:
    - Upload an image of the PCB to analyze.
    - View the annotated image with defect descriptions and confidence levels.
 
@@ -66,7 +71,7 @@ This project is designed to detect and describe defects in printed circuit board
 
 ## Troubleshooting
 - **CUDA Errors**: Ensure that your GPU supports CUDA and the correct drivers are installed.
-- **Model Not Found**: Verify that the YOLOv5 model files are in the `model` directory.
+- **Model Not Found**: Verify that the YOLOv5 model file is in the `model` directory.
 - **Dependencies**: Reinstall dependencies using `pip install -r requirements.txt` if issues arise.
 
 ## Future Improvements
@@ -79,3 +84,4 @@ This project uses the YOLOv5 object detection model, available at [Ultralytics](
 
 ## License
 This project is licensed under the MIT License.
+
