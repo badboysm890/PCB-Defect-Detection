@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  pcbdetection:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8089:7860"  # Maps host port 80 to container port 7860
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
