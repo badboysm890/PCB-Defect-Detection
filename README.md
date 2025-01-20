@@ -2,8 +2,9 @@
 
 This project is designed to detect and describe defects in printed circuit boards (PCBs) using a YOLOv5 deep learning model. It identifies common defects like missing holes, open circuits, and short circuits, and provides bounding boxes with confidence levels for each detection.
 
-![Example Screenshot](example.png)
+![Example Screenshot](example.png) It identifies common defects like missing holes, open circuits, and short circuits, and provides bounding boxes with confidence levels for each detection.
 
+![Example Screenshot](example.png)
 
 ## Features
 - **Defect Detection**: Identifies common PCB defects such as missing holes, open circuits, and short circuits.
@@ -48,6 +49,26 @@ This project is designed to detect and describe defects in printed circuit board
    ```bash
    python3 appVision.py
    ```
+
+## Training Details
+
+### Training Summary
+
+| Metric                | Value   |
+|-----------------------|---------|
+| Total Epochs          | 15      |
+| Final Precision       | 96.31%  |
+| Final Recall          | 97.91%  |
+| Final mAP@0.5         | 98.25%  |
+| Final mAP@0.5:0.95    | 53.71%  |
+
+![Training Metrics Curve](output.png)
+
+### System Specifications
+- **GPU**: NVIDIA GeForce RTX 4090
+- **CPU**: Intel Core i9
+- **RAM**: 32 GB
+- **Python Version**: 3.12.8
 
 ## Usage
 
